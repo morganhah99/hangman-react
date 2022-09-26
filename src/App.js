@@ -8,6 +8,7 @@ import Popup from './components/Popup';
 import Notification from './components/Notification';
 import { showNotification as show } from './helpers/helpers';
 import randomWords from 'random-words';
+import Footer from './components/Footer';
 
 const figureParts = document.querySelectorAll('.figure-part');
 const listOfWords = randomWords(100);
@@ -75,6 +76,9 @@ function App() {
       </div>
       <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
       <Notification showNotification={showNotification} />
+      <div className='footer'>
+        <Footer />
+      </div>
     </>
   );
 }
