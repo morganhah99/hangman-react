@@ -7,10 +7,12 @@ import Word from './components/Word';
 import Popup from './components/Popup';
 import Notification from './components/Notification';
 import { showNotification as show } from './helpers/helpers';
+import randomWords from 'random-words';
 
 const figureParts = document.querySelectorAll('.figure-part');
+const listOfWords = randomWords(100);
 
-const words = ['application', 'programming', 'interface', 'wizard'];
+const words = listOfWords;
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -58,7 +60,8 @@ function App() {
     setWrongLetters([]);
 
     const random = Math.floor(Math.random() * words.length);
-    selectedWord = words[random];
+    selectedWord = words
+    window.location.reload(false);
 
   }
 
