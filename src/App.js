@@ -9,6 +9,7 @@ import Notification from './components/Notification';
 import { showNotification as show } from './helpers/helpers';
 import randomWords from 'random-words';
 import Footer from './components/Footer';
+import Player from './components/Player';
 
 const figureParts = document.querySelectorAll('.figure-part');
 const listOfWords = randomWords(100);
@@ -23,6 +24,8 @@ const correctLetters = [];
 const wrongLetters = [];
 
 function App() {
+
+  const [song, setSong] = useState();
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
@@ -76,6 +79,7 @@ function App() {
       </div>
       <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
       <Notification showNotification={showNotification} />
+      <Player />
       <div className='footer'>
         <Footer />
       </div>
