@@ -1,6 +1,7 @@
 import React from 'react'
 import song from './C418 - Haggstrom - Minecraft Volume Alpha.mp3';
-
+import { AiFillPlayCircle } from "react-icons/ai";
+import { AiOutlinePause } from "react-icons/ai";
 
 import { Component } from "react";
 
@@ -48,7 +49,7 @@ class App extends Component {
 
                 {/* Button to call our main function */}
                 <button onClick={this.playPause}>
-                    Play | Pause
+                    <AiFillPlayCircle /> | <AiOutlinePause />
                 </button>
             </div>
         );
